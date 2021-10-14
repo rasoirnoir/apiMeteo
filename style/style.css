@@ -22,6 +22,17 @@ img{
     text-align: right;
 }
 
+.loading{
+    display: block;
+    width: 5em;
+    margin: auto;
+    display: none;
+}
+
+.infos{
+    display: block;
+}
+
 #prev3jours{
     display: flex;
 }

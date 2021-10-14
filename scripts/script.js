@@ -21,6 +21,14 @@ const pictoJour3 = document.getElementById("pictoJour3");
 const temperatureJour3 = document.getElementById("temperatureJour3");
 
 const appelAPI = (villeRecherche) => {
+    let tabInfos = document.getElementsByClassName("infos");
+    for(element of tabInfos){
+        element.style.display = "none";
+    }
+    let tabLoadings = document.getElementsByClassName("loading");
+    for(element of tabLoadings){
+        element.style.display = "block";
+    }
     console.log("appel de l'url : ");
     console.log(url + villeRecherche);
     fetch(url + villeRecherche)
@@ -54,6 +62,15 @@ const appelAPI = (villeRecherche) => {
         prevJour3.innerText = jsonResp.fcst_day_3.condition;
         pictoJour3.src = jsonResp.fcst_day_3.icon;
         temperatureJour3.innerText = `${jsonResp.fcst_day_3.tmin}/${jsonResp.fcst_day_3.tmax}°C`;
+
+        let tabInfos = document.getElementsByClassName("infos");
+        for(element of tabInfos){
+            element.style.display = "block";
+        }
+        let tabLoadings = document.getElementsByClassName("loading");
+        for(element of tabLoadings){
+            element.style.display = "none";
+        }
     })
     .catch(error => {
         console.log("un problème est survenu !!");
