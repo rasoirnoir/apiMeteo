@@ -1,0 +1,11 @@
+{
+  "name": "apimeteo",
+  "version": "1.0.0",
+  "description": "test de l'api météo suisse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William Noris",
+  "license": "ISC"
+}

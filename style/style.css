@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#recherche{
+    margin: 1em;
+}
+
+#vignette{
+    border: 2px solid;
+    width: 14em;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 1em;
+}
+
+#soleil{
+    margin: 1em;
+}
+
+#prevision{
+    align-items: center;
+}
+
+#prevision p{
+    text-align: center;
+}
+
+#picto{
+    display: block;
+    width: auto;
+    margin:  0 auto;
+}
+
+#lever,#coucher{
+    text-align: right;
+}
+
