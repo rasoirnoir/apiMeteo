@@ -3,11 +3,23 @@
     padding: 0;
 }
 
+img{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
 .jours{
     border: 1px solid;
     margin: 1em;
     padding: 1em;
     border-radius: 10px;
+    background-color: #ECEFF1;
+}
+
+.jour_short{
+    font-size: smaller;
+    text-align: right;
 }
 
 #prev3jours{
@@ -24,25 +36,21 @@
     padding: 1em;
     border-radius: 10px;
     margin: 1em;
+    background-color: #ECEFF1;
 }
 
 #soleil{
     margin: 1em;
 }
 
-#prevision{
+.prevision{
     align-items: center;
 }
 
-#prevision p{
+.prevision p{
     text-align: center;
 }
 
-#picto{
-    display: block;
-    width: auto;
-    margin:  0 auto;
-}
 
 #lever,#coucher{
     text-align: right;
