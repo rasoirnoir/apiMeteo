@@ -11,9 +11,15 @@
 <body>
 
     <section id="recherche">
-        <label for="textRecherche">Recherche</label>
-        <input type="text" name="textRecherche" id="textRecherche">
-        <input type="button" value="OK" onclick="chercher()" id="ok">
+        <form onsubmit="event.preventDefault(); chercher();">
+            <fieldset>
+                <legend>recherche</legend>
+                <label for="textRecherche">Recherche</label>
+                <input type="text" name="textRecherche" id="textRecherche">
+                <input type="submit" value="OK" id="ok">
+                <label id="lblError"></label>
+            </fieldset>            
+        </form>
     </section>
 
     <section id="vignette">

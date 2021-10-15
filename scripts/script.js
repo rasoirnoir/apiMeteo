@@ -22,6 +22,9 @@ const temperatureJour3 = document.getElementById("temperatureJour3");
 
 const appelAPI = (villeRecherche) => {
     let tabInfos = document.getElementsByClassName("infos");
+    let lblError = document.querySelector("#lblError");
+    lblError.style.display = "none";
+    lblError.innerText = `Ville ${villeRecherche} inconnue`
     for(element of tabInfos){
         element.style.display = "none";
     }
@@ -62,7 +65,14 @@ const appelAPI = (villeRecherche) => {
         prevJour3.innerText = jsonResp.fcst_day_3.condition;
         pictoJour3.src = jsonResp.fcst_day_3.icon;
         temperatureJour3.innerText = `${jsonResp.fcst_day_3.tmin}/${jsonResp.fcst_day_3.tmax}°C`;
-
+    })
+    .catch(error => {
+        console.log("un problème est survenu !!");
+        console.log(error.message);
+        let lblError = document.querySelector("#lblError");
+        lblError.style.display = "inline";
+        lblError.innerText = `Ville ${villeRecherche} inconnue`
+    }).finally( () => {
         let tabInfos = document.getElementsByClassName("infos");
         for(element of tabInfos){
             element.style.display = "block";
@@ -71,10 +81,7 @@ const appelAPI = (villeRecherche) => {
         for(element of tabLoadings){
             element.style.display = "none";
         }
-    })
-    .catch(error => {
-        console.log("un problème est survenu !!");
-        console.log(error.message);
+        ;
     });    
 }
 
